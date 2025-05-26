@@ -2,19 +2,11 @@
  * 유치원 섹션 관리 스크립트
  */
 
-// 모든 하위 섹션 제목 배열 (검색용) - 다단계 구조 포함
+// 모든 하위 섹션 제목 배열 (검색용)
 const allSections = [
-    // 1. 학사
     '1-1. 유치원 규칙',
-    '1-1-1. 교육과정 관련 규칙',
-    '1-1-2. 출결 관련 규칙',
     '1-2. 출결 및 전ㆍ출입',
-    '1-2-1. 출석부 관리',
-    '1-2-2. 전출입 관리',
     '1-3. 유치원 생활기록부',
-    '1-3-1. 생활기록부 작성지침',
-    '1-3-2. 생활기록부 관리',
-    // 2. 교육과정
     '2-1. 교육과정 편성ㆍ운영',
     '2-2. 교육과정 평가',
     '2-3. 유치원 평가',
@@ -24,17 +16,14 @@ const allSections = [
     '2-7. 유ㆍ초 이음교육',
     '2-8. 생태전환교육',
     '2-9. 학부모 참여 교육',
-    // 3. 방과후과정
     '3-1. 방과후 과정',
     '3-2. 특성화활동',
-    // 4. 안전ㆍ보건
     '4-1. 안전교육',
     '4-2. 아동학대 조기 발견 및 관리 대응',
     '4-3-1. 학생건강관리',
     '4-3-2. 감염병 예방 및 관리',
     '4-3-3. 성교육 및 성폭력 예방 교육',
     '4-3-4. 학교 환경 관리',
-    // 5. 정보
     '5-1. 유치원 정보공시',
     '5-2. 정보화기기 관리',
     '5-3. 유치원 정보보안',
@@ -44,43 +33,31 @@ const allSections = [
 
 // 각 하위 섹션에 대한 URL 매핑
 const subsectionUrls = {
-    // 1. 학사 섹션 URLs
-    'academic-1-1-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5ODMxMTN8RHww',
-    'academic-1-1-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5MjA5MDR8RHww',
-    'academic-1-2-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5MjA5MDR8RHww',
-    'academic-1-2-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5MjA5MDR8RHww',
-    'academic-1-3-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU4NDc5NDR8RHww',
-    'academic-1-3-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU4NDc5NDR8RHww',
-    
-    // 2. 교육과정 섹션 URLs
-    'curriculum-2-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU3NTgwODh8RHww',
-    'curriculum-2-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU2NzE4MTd8RHww',
-    'curriculum-2-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU2MTA4ODh8RHww',
-    'curriculum-2-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ5Mjk5Mjh8RHww',
-    'curriculum-2-5': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ4Nzg5ODV8RHww',
-    'curriculum-2-6': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ4MDUwMDB8RHww',
-    'curriculum-2-7': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ3Mjg5Njh8RHww',
-    'curriculum-2-8': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ2NTYyNjV8RHww',
-    'curriculum-2-9': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQzNzkyNzN8RHww',
-    
-    // 3. 방과후과정 섹션 URLs
-    'afterschool-3-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQzMDgzNjF8RHww',
-    'afterschool-3-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQyNDEwMzN8RHww',
-    
-    // 4. 안전ㆍ보건 섹션 URLs
-    'safety-4-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQxNTQ1MDV8RHww',
-    'safety-4-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQwMzQ0NDB8RHww',
-    'safety-4-3-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM5Njg5MDV8RHww',
-    'safety-4-3-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM3MjUxOTJ8RHww',
-    'safety-4-3-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM2NjA2ODB8RHww',
-    'safety-4-3-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM2MTM1Nzd8RHww',
-    
-    // 5. 정보 섹션 URLs
-    'information-5-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMzNjkwOTd8RHww',
-    'information-5-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMyNzU0MDB8RHww',
-    'information-5-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMyMDYyODF8RHww',
-    'information-5-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMwOTk1Mjl8RHww',
-    'information-5-5': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMwMTU1NjB8RHww'
+    '1-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5ODMxMTN8RHww',
+    '1-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU5MjA5MDR8RHww',
+    '1-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU4NDc5NDR8RHww',
+    '2-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU3NTgwODh8RHww',
+    '2-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU2NzE4MTd8RHww',
+    '2-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU2MTA4ODh8RHww',
+    '2-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ5Mjk5Mjh8RHww',
+    '2-5': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ4Nzg5ODV8RHww',
+    '2-6': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ4MDUwMDB8RHww',
+    '2-7': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ3Mjg5Njh8RHww',
+    '2-8': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQ2NTYyNjV8RHww',
+    '2-9': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQzNzkyNzN8RHww',
+    '3-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQzMDgzNjF8RHww',
+    '3-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQyNDEwMzN8RHww',
+    '4-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQxNTQ1MDV8RHww',
+    '4-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTQwMzQ0NDB8RHww',
+    '4-3-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM5Njg5MDV8RHww',
+    '4-3-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM3MjUxOTJ8RHww',
+    '4-3-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM2NjA2ODB8RHww',
+    '4-3-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTM2MTM1Nzd8RHww',
+    '5-1': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMzNjkwOTd8RHww',
+    '5-2': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMyNzU0MDB8RHww',
+    '5-3': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMyMDYyODF8RHww',
+    '5-4': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMwOTk1Mjl8RHww',
+    '5-5': 'https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTMwMTU1NjB8RHww'
 };
 
 // 홈으로 돌아가기
@@ -103,11 +80,10 @@ function openSubsectionLink(sectionKey) {
         console.log(`섹션 ${sectionKey} 자료 링크 열림: ${url}`);
     } else {
         console.error(`섹션 ${sectionKey}에 대한 URL을 찾을 수 없습니다.`);
-        alert('현재 준비 중인 자료입니다.');
     }
 }
 
-// 주요 섹션 토글 (펼치기/접기)
+// 섹션 토글 (펼치기/접기)
 function toggleSection(sectionId) {
     const content = document.getElementById(`${sectionId}-content`);
     const icon = document.getElementById(`${sectionId}-icon`);
@@ -118,22 +94,6 @@ function toggleSection(sectionId) {
     } else {
         content.classList.add('hidden');
         icon.style.transform = 'rotate(0deg)';
-    }
-}
-
-// 하위 섹션 토글 (다단계 구조용)
-function toggleSubsection(subsectionId) {
-    const content = document.getElementById(`${subsectionId}-content`);
-    const icon = document.getElementById(`${subsectionId}-icon`);
-    
-    if (content && icon) {
-        if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden');
-            icon.style.transform = 'rotate(180deg)';
-        } else {
-            content.classList.add('hidden');
-            icon.style.transform = 'rotate(0deg)';
-        }
     }
 }
 
@@ -187,18 +147,29 @@ function displaySearchResults(results) {
     searchResults.innerHTML = resultsHTML;
 }
 
-// 특정 섹션으로 스크롤 (다단계 구조 지원)
+// 특정 섹션으로 스크롤
 function scrollToSection(sectionTitle) {
     // 검색 결과 숨기기
     document.getElementById('searchResults').classList.add('hidden');
     document.getElementById('searchInput').value = '';
     
-    // 해당 섹션을 포함하는 요소 찾기
+    // 해당 섹션을 포함하는 주요 카테고리 찾기 및 펼치기
     const sectionElement = document.querySelector(`[data-section="${sectionTitle}"]`);
     
     if (sectionElement) {
-        // 상위 섹션들 모두 펼치기
-        expandParentSections(sectionElement);
+        // 상위 섹션 펼치기
+        const parentSection = sectionElement.closest('.section-group');
+        if (parentSection) {
+            const parentContent = parentSection.querySelector('[id$="-content"]');
+            const parentIcon = parentSection.querySelector('[id$="-icon"]');
+            
+            if (parentContent && parentContent.classList.contains('hidden')) {
+                parentContent.classList.remove('hidden');
+                if (parentIcon) {
+                    parentIcon.style.transform = 'rotate(180deg)';
+                }
+            }
+        }
         
         // 스크롤 애니메이션
         setTimeout(() => {
@@ -213,37 +184,6 @@ function scrollToSection(sectionTitle) {
                 sectionElement.classList.remove('bg-yellow-100');
             }, 2000);
         }, 300);
-    }
-}
-
-// 상위 섹션들 펼치기 (다단계 구조 지원)
-function expandParentSections(element) {
-    // 주요 섹션 펼치기
-    const parentGroup = element.closest('.section-group');
-    if (parentGroup) {
-        const mainContent = parentGroup.querySelector('[id$="-content"]');
-        const mainIcon = parentGroup.querySelector('[id$="-icon"]');
-        
-        if (mainContent && mainContent.classList.contains('hidden')) {
-            mainContent.classList.remove('hidden');
-            if (mainIcon) {
-                mainIcon.style.transform = 'rotate(180deg)';
-            }
-        }
-    }
-    
-    // 하위 섹션 펼치기 (학사 섹션의 경우)
-    const parentSubsection = element.closest('.subsection-group');
-    if (parentSubsection) {
-        const subsectionContent = parentSubsection.querySelector('[id*="-content"]');
-        const subsectionIcon = parentSubsection.querySelector('[id*="-icon"]');
-        
-        if (subsectionContent && subsectionContent.classList.contains('hidden')) {
-            subsectionContent.classList.remove('hidden');
-            if (subsectionIcon) {
-                subsectionIcon.style.transform = 'rotate(180deg)';
-            }
-        }
     }
 }
 
@@ -309,4 +249,3 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', handleResize);
-

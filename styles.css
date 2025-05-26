@@ -73,61 +73,10 @@
     background: #94a3b8;
 }
 
-/* COMPLETE REMOVAL OF BLUE FOCUS OUTLINES/BORDERS - HIGHEST PRIORITY */
-/* Remove all default blue focus outlines and box-shadows from buttons and links */
-a:focus,
-a:active,
-button:focus,
-button:active,
-[role='button']:focus,
-[role='button']:active,
-input[type='button']:focus,
-input[type='button']:active,
-input[type='submit']:focus,
-input[type='submit']:active,
-input[type='reset']:focus,
-input[type='reset']:active,
-.subsection-item:focus,
-.subsection-item:active,
-.section-card:focus,
-.section-card:active,
-.section-card button:focus,
-.section-card button:active,
-.search-result-item:focus,
-.search-result-item:active,
-div[onclick]:focus,
-div[onclick]:active,
-span[onclick]:focus,
-span[onclick]:active {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* Ensure no default browser focus styles leak through */
-*:focus,
-*:active {
-    outline: none !important;
-}
-
-/* Specifically target any Tailwind focus utilities that might add outlines */
-.focus\:border-pink-500:focus,
-.focus\:ring-2:focus,
-.focus\:ring-pink-200:focus {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* Search input focus styles - keep only the pink shadow for search input as it's functional */
-#searchInput:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1) !important;
-}
-
-/* All other input focus styles - remove completely */
-input:not(#searchInput):focus {
-    outline: none !important;
-    box-shadow: none !important;
+/* Search input focus styles */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
 }
 
 /* Back button hover effect */
@@ -181,6 +130,13 @@ button:hover {
     }
 }
 
+/* Focus states for accessibility */
+button:focus,
+.subsection-item:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
 /* Loading state styles */
 .loading {
     opacity: 0.6;
@@ -196,32 +152,3 @@ button:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Additional safeguards for focus removal */
-/* Target common interactive elements that might show focus */
-.cursor-pointer:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Remove focus from clickable divs */
-div[onclick]:focus,
-div.cursor-pointer:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Ensure hover states work without focus artifacts */
-.hover\:bg-gray-50:hover {
-    background-color: #f9fafb;
-}
-
-.hover\:bg-gray-300:hover {
-    background-color: #d1d5db;
-}
-
-/* Remove any potential focus rings from Tailwind utilities */
-.focus\:outline-none:focus {
-    outline: 2px solid transparent !important;
-    outline-offset: 2px !important;
-    box-shadow: none !important;
-}
