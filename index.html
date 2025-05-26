@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교업무 도움자료</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">학교업무 도움자료</h1>
+            <p class="text-lg text-gray-600">교육현장에서 필요한 다양한 업무 자료를 제공합니다</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 유치원 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('kindergarten')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎨</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">유치원</h2>
+                        </div>
+                        <p class="text-gray-600">유치원 업무 관련 자료 및 서식</p>
+                    </button>
+                </div>
+
+                <!-- 초등학교 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('elementary')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">초등학교</h2>
+                        </div>
+                        <p class="text-gray-600">초등학교 업무 관련 자료 및 서식</p>
+                    </button>
+                </div>
+
+                <!-- 중고등학교 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('secondary')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">중고등학교</h2>
+                        </div>
+                        <p class="text-gray-600">중고등학교 업무 관련 자료 및 서식</p>
+                    </button>
+                </div>
+
+                <!-- 특수학교(급) 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('special')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🤝</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">특수학교(급)</h2>
+                        </div>
+                        <p class="text-gray-600">특수교육 관련 업무 자료 및 서식</p>
+                    </button>
+                </div>
+
+                <!-- 일반행정 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('administration')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📋</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">일반행정</h2>
+                        </div>
+                        <p class="text-gray-600">학교 일반행정 업무 관련 자료</p>
+                    </button>
+                </div>
+
+                <!-- 교무행정원 버튼 -->
+                <div class="section-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <button class="w-full h-full p-8 text-left" onclick="selectSection('clerk')">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">💼</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-gray-800">교무행정원</h2>
+                        </div>
+                        <p class="text-gray-600">교무행정원 업무 관련 자료 및 서식</p>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-8 border-t border-gray-200">
+            <p class="text-gray-500">© 2024 학교업무 도움자료. 모든 권리 보유.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
