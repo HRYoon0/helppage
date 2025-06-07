@@ -4,7 +4,6 @@
 let currentExpandedSections = new Set(); 
 
 // 각 섹션의 데이터가 렌더링(화면에 그려졌는지)되었는지 추적하는 플래그 변수들
-// 한번 렌더링된 데이터는 다시 렌더링하지 않도록 하여 성능을 향상시킵니다.
 let kindergartenSectionsRendered = false;
 let elementarySectionsRendered = false;
 let secondarySectionsRendered = false;
@@ -25,7 +24,6 @@ function toggleSection(sectionId) {
         content.classList.remove('hidden'); // 숨김 클래스 제거하여 표시
         if (arrow) arrow.style.transform = 'rotate(180deg)'; // 화살표 아이콘 180도 회전
         
-        // 버튼의 모서리 스타일을 조정 (열렸을 때는 위쪽만 둥글게)
         const button = arrow ? arrow.closest('button') : document.querySelector(`button[onclick="toggleSection('${sectionId}')"]`);
         if (button) {
             button.classList.remove('rounded-lg');
@@ -35,7 +33,7 @@ function toggleSection(sectionId) {
         // 각 섹션의 내용이 아직 렌더링되지 않았다면, 해당 섹션의 데이터를 렌더링하는 함수를 호출
         if (sectionId === 'kindergarten' && !kindergartenSectionsRendered) {
             renderKindergartenSections();
-            kindergartenSectionsRendered = true; // 렌더링 되었음을 표시
+            kindergartenSectionsRendered = true;
         } else if (sectionId === 'elementary' && !elementarySectionsRendered) {
             renderElementarySections();
             elementarySectionsRendered = true;
@@ -57,7 +55,6 @@ function toggleSection(sectionId) {
         content.classList.add('hidden'); // 숨김 클래스 추가하여 숨김
         if (arrow) arrow.style.transform = 'rotate(0deg)'; // 화살표 아이콘 원래대로
         
-        // 버튼의 모서리 스타일을 원래대로 (전체 둥글게)
         const button = arrow ? arrow.closest('button') : document.querySelector(`button[onclick="toggleSection('${sectionId}')"]`);
         if (button) {
             button.classList.remove('rounded-t-lg');
@@ -124,20 +121,14 @@ function renderStaffSections() {
 
 /**
  * 상세 항목(하위 아코디언 메뉴)의 HTML 구조를 생성하는 함수
- * @param {string} title - 섹션 제목 (예: '교수학습')
- * @param {object} data - 해당 섹션의 데이터 (아이콘, 색상, 항목 리스트 포함)
- * @param {string} typePrefix - 카테고리 타입 (예: 'elementary')
- * @param {string} toggleFunctionName - 하위 섹션을 토글하는 함수의 이름
  * @returns {HTMLElement} - 생성된 HTML 요소
  */
 function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) {
     const sectionElement = document.createElement('div');
     sectionElement.className = 'mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-xs';
     
-    // 섹션 ID 생성 시 특수문자 등을 제거하여 유효한 ID로 만듦
     const sectionId = `${typePrefix}-section-${title.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
     
-    // 상세 항목의 HTML 내용을 정의
     sectionElement.innerHTML = `
         <button 
             onclick="${toggleFunctionName}('${sectionId}')" 
@@ -158,7 +149,7 @@ function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) 
                     <a 
                         href="${item.url}" 
                         target="_blank"
-                        onclick="openLink('${item.url}'); return false;"
+                        onclick="window.open(this.href, '_blank'); return false;"
                         class="flex items-center text-gray-700 hover:text-${data.color}-600 hover:bg-white p-2 rounded-md transition-all duration-200 group"
                     >
                         <i class="fas fa-file-alt text-gray-400 group-hover:text-${data.color}-500 mr-3 text-sm\\"></i>
@@ -254,14 +245,8 @@ function searchStaff() {
 
 /**
  * 검색어에 따라 항목을 필터링하고 결과를 다시 렌더링하는 함수
- * @param {string} searchTerm - 사용자가 입력한 검색어
- * @param {object} dataObject - 검색할 전체 데이터 객체
- * @param {HTMLElement} containerElement - 결과를 표시할 HTML 컨테이너 요소
- * @param {string} typePrefix - 카테고리 타입 (예: 'elementary')
- * @param {string} toggleFunctionName - 하위 섹션을 토글하는 함수의 이름
  */
 function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefix, toggleFunctionName) {
-    // 검색어가 비어있으면 전체 목록을 다시 렌더링하고 모든 하위 섹션을 닫음
     if (!searchTerm.trim()) {
         containerElement.innerHTML = ''; 
         Object.entries(dataObject).forEach(([sectionTitle, sectionData]) => {
@@ -282,7 +267,6 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         return;
     }
     
-    // 검색어와 일치하는 데이터를 필터링
     const filteredData = {};
     Object.entries(dataObject).forEach(([sectionTitle, sectionData]) => {
         const matchingItems = sectionData.items.filter(item => 
@@ -298,7 +282,6 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         }
     });
     
-    // 필터링된 결과를 화면에 표시
     containerElement.innerHTML = '';
     if (Object.keys(filteredData).length === 0) {
         containerElement.innerHTML = `
@@ -314,7 +297,6 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, typePrefix, toggleFunctionName);
         containerElement.appendChild(sectionElement);
         
-        // 검색 결과에 해당하는 섹션은 자동으로 펼쳐줌
         const sectionId = `${typePrefix}-section-${sectionTitle.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
         const sectionTitleMatches = sectionTitle.toLowerCase().includes(searchTerm);
         const itemsMatch = sectionData.items.some(item => item.title.toLowerCase().includes(searchTerm));
@@ -330,15 +312,6 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
             }, 50); 
         }
     });
-}
-
-/**
- * 전달받은 URL을 새 탭으로 열어주는 함수 (모바일 호환성 향상)
- * @param {string} url - 열고자 하는 웹 페이지 주소
- */
-function openLink(url) {
-    // window.open() 함수를 사용해 새 탭(_blank)으로 URL을 엽니다.
-    window.open(url, '_blank');
 }
 
 // DOM(문서 객체 모델) 로드가 완료되면 실행될 코드
