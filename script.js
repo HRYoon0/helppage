@@ -4,6 +4,7 @@
 let currentExpandedSections = new Set(); 
 
 // 각 섹션의 데이터가 렌더링(화면에 그려졌는지)되었는지 추적하는 플래그 변수들
+// 한번 렌더링된 데이터는 다시 렌더링하지 않도록 하여 성능을 향상시킵니다.
 let kindergartenSectionsRendered = false;
 let elementarySectionsRendered = false;
 let secondarySectionsRendered = false;
@@ -118,17 +119,43 @@ function renderStaffSections() {
     });
 }
 
-
 /**
  * 상세 항목(하위 아코디언 메뉴)의 HTML 구조를 생성하는 함수
+ * @param {string} title - 섹션 제목 (예: '교수학습')
+ * @param {object} data - 해당 섹션의 데이터 (아이콘, 색상, 항목 리스트 포함)
+ * @param {string} typePrefix - 카테고리 타입 (예: 'elementary')
+ * @param {string} toggleFunctionName - 하위 섹션을 토글하는 함수의 이름
  * @returns {HTMLElement} - 생성된 HTML 요소
  */
 function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) {
     const sectionElement = document.createElement('div');
     sectionElement.className = 'mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-xs';
     
+    // 섹션 ID 생성 시 특수문자 등을 제거하여 유효한 ID로 만듦
     const sectionId = `${typePrefix}-section-${title.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
     
+    // innerHTML을 생성하기 전에 각 항목의 링크를 미리 만듭니다.
+    const itemsHtml = data.items.map(item => {
+        // 최종 목적지 URL을 URL 파라미터로 사용하기 위해 안전하게 인코딩합니다.
+        const encodedUrl = encodeURIComponent(item.url);
+        
+        // 링크(a태그)의 href는 redirect.html을 가리키도록 하고, 인코딩된 실제 URL을 쿼리 파라미터로 전달합니다.
+        // target="_blank"는 유지하여 새 탭에서 열리도록 합니다.
+        return `
+            <div class="px-4 py-2 border-b border-gray-100 last:border-b-0">
+                <a 
+                    href="redirect.html?url=${encodedUrl}" 
+                    target="_blank"
+                    class="flex items-center text-gray-700 hover:text-${data.color}-600 hover:bg-white p-2 rounded-md transition-all duration-200 group"
+                >
+                    <i class="fas fa-file-alt text-gray-400 group-hover:text-${data.color}-500 mr-3 text-sm\"></i>
+                    <span class="text-sm flex-grow">${item.title}</span>
+                    <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${data.color}-400 ml-2 text-xs flex-shrink-0\"></i>
+                </a>
+            </div>
+        `;
+    }).join('');
+
     sectionElement.innerHTML = `
         <button 
             onclick="${toggleFunctionName}('${sectionId}')" 
@@ -144,25 +171,13 @@ function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) 
         </button>
         
         <div id="${sectionId}-content" class="hidden bg-gray-50 border-t border-gray-200">
-            ${data.items.map(item => `
-                <div class="px-4 py-2 border-b border-gray-100 last:border-b-0">
-                    <a 
-                        href="${item.url}" 
-                        target="_blank"
-                        onclick="window.open(this.href, '_blank'); return false;"
-                        class="flex items-center text-gray-700 hover:text-${data.color}-600 hover:bg-white p-2 rounded-md transition-all duration-200 group"
-                    >
-                        <i class="fas fa-file-alt text-gray-400 group-hover:text-${data.color}-500 mr-3 text-sm\\"></i>
-                        <span class="text-sm flex-grow">${item.title}</span>
-                        <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${data.color}-400 ml-2 text-xs flex-shrink-0\\"></i>
-                    </a>
-                </div>
-            `).join('')}
+            ${itemsHtml}
         </div>
     `;
     
     return sectionElement;
 }
+
 
 // 각 카테고리별 하위 섹션을 토글하는 함수들
 function toggleKindergartenSubSection(sectionId) {
@@ -245,8 +260,14 @@ function searchStaff() {
 
 /**
  * 검색어에 따라 항목을 필터링하고 결과를 다시 렌더링하는 함수
+ * @param {string} searchTerm - 사용자가 입력한 검색어
+ * @param {object} dataObject - 검색할 전체 데이터 객체
+ * @param {HTMLElement} containerElement - 결과를 표시할 HTML 컨테이너 요소
+ * @param {string} typePrefix - 카테고리 타입 (예: 'elementary')
+ * @param {string} toggleFunctionName - 하위 섹션을 토글하는 함수의 이름
  */
 function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefix, toggleFunctionName) {
+    // 검색어가 비어있으면 전체 목록을 다시 렌더링하고 모든 하위 섹션을 닫음
     if (!searchTerm.trim()) {
         containerElement.innerHTML = ''; 
         Object.entries(dataObject).forEach(([sectionTitle, sectionData]) => {
@@ -267,6 +288,7 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         return;
     }
     
+    // 검색어와 일치하는 데이터를 필터링
     const filteredData = {};
     Object.entries(dataObject).forEach(([sectionTitle, sectionData]) => {
         const matchingItems = sectionData.items.filter(item => 
@@ -282,6 +304,7 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         }
     });
     
+    // 필터링된 결과를 화면에 표시
     containerElement.innerHTML = '';
     if (Object.keys(filteredData).length === 0) {
         containerElement.innerHTML = `
@@ -297,6 +320,7 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
         const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, typePrefix, toggleFunctionName);
         containerElement.appendChild(sectionElement);
         
+        // 검색 결과에 해당하는 섹션은 자동으로 펼쳐줌
         const sectionId = `${typePrefix}-section-${sectionTitle.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
         const sectionTitleMatches = sectionTitle.toLowerCase().includes(searchTerm);
         const itemsMatch = sectionData.items.some(item => item.title.toLowerCase().includes(searchTerm));
