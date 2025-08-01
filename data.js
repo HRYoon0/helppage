@@ -428,6 +428,42 @@ const specialData = {
     }
 };
 
+const staffData = {
+    "1. 교무행정 업무-1": {
+        icon: "fas fa-clipboard-list",
+        color: "emerald",
+        items: [
+            { 
+                id: "st-1-1", 
+                title: "1-1. 교무행정 업무-1", 
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk4NDAxMzZ8RHww" 
+            }
+        ]
+    },
+    "2. 교무행정 업무-2": {
+        icon: "fas fa-tasks",
+        color: "fuchsia",
+        items: [
+            { 
+                id: "st-2-1", 
+                title: "2-1. 교무행정 업무-2", 
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk3MTgyODB8RHww" 
+            }
+        ]
+    },
+    "3. 그 외 도움자료": {
+        icon: "fas fa-question-circle",
+        color: "violet",
+        items: [
+            { 
+                id: "st-3-1", 
+                title: "3-1. 그 외 도움자료", 
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk0OTM1MTN8RHww" 
+            }
+        ]
+    }
+};
+
 const adminData = {
     "1. 행정일반": {
         icon: "fas fa-archive",
@@ -488,42 +524,6 @@ const adminData = {
         color: "teal",
         items: [
             { id: "a-7-1", title: "7-1. 감사일반", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LsCWyGFpVqw6NLVCVs97cA.T-J1fYSt_52tXxrswokSNkp-JJdnREo5OgkQ-CQw0YDPFf_BmX27iV2UgOnfmY4QKsQ3b56aYFuvHNKBZEzbKg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc5MDE0NTc5Mjh8RHww" }
-        ]
-    }
-};
-
-const staffData = {
-    "1. 교무행정 업무-1": {
-        icon: "fas fa-clipboard-list",
-        color: "emerald",
-        items: [
-            { 
-                id: "st-1-1", 
-                title: "1-1. 교무행정 업무-1", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk4NDAxMzZ8RHww" 
-            }
-        ]
-    },
-    "2. 교무행정 업무-2": {
-        icon: "fas fa-tasks",
-        color: "fuchsia",
-        items: [
-            { 
-                id: "st-2-1", 
-                title: "2-1. 교무행정 업무-2", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk3MTgyODB8RHww" 
-            }
-        ]
-    },
-    "3. 그 외 도움자료": {
-        icon: "fas fa-question-circle",
-        color: "violet",
-        items: [
-            { 
-                id: "st-3-1", 
-                title: "3-1. 그 외 도움자료", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk0OTM1MTN8RHww" 
-            }
         ]
     }
 };
