@@ -322,7 +322,7 @@ const secondaryData = {
         ]
     },
     "3. 연구": {
-        icon: "fas fa-microscope",
+        icon: "fas fa-seedling",
         color: "lime",
         items: [
             { id: "s-3-1", title: "3-1. 자율 장학", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzY3OTc2MDM1OTJ8RHww" },
@@ -350,7 +350,7 @@ const secondaryData = {
         ]
     },
     "5. 과학ㆍ환경": {
-        icon: "fas fa-seedling",
+        icon: "fas fa-microscope",
         color: "teal",
         items: [
             { id: "s-5-1", title: "5-1. 과학실 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzY3OTk1NzQ1MzZ8RHww" },
