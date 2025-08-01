@@ -168,6 +168,17 @@ const kindergartenData = {
 };
 
 const elementaryData = {
+    "0. 일러두기 및 목록": {
+        icon: "fas fa-exclamation",
+        color: "red",
+        items: [
+            {
+                id: "e-0-1",
+                title: "0. 일러두기 및 목록",
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MDE3OTc4NjYyNDh8RHww"
+            }
+        ]
+    },
     "1. 교무": {
         icon: "fas fa-briefcase",
         color: "sky",
