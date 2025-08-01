@@ -24,7 +24,6 @@ const kindergartenData = {
                 url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/oFWhwkeIXddZnYPq7r2p6A.t52EbMKyIatuQglSpxxyCHoGJoITWij03M1o6NBYMkhIH66kHJGGX08_k2mkgyGiSPH56IZGWkIOoBQoUuxrPw?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTU4NDc5NDR8RHww"
             }
         ]
-        ]
     },
     "2. 교육과정": {
         icon: "fas fa-chalkboard-teacher",
