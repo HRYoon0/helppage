@@ -460,6 +460,50 @@ const adminData = {
             { id: "a-1-3", title: "1-3. 나이스", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTMzOTU5NzZ8RHww" }
         ]
     },
+    "2. 교무행정업무": {
+        icon: "fas fa-tasks",
+        color: "fuchsia",
+        items: [
+            { id: "a-2-1", title: "2-1. 전입 전출 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTIyODUxOTN8RHww" },
+            { id: "a-2-2", title: "2-2. 교과용도서", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTMyNjM4ODF8RHww" },
+            { id: "a-2-3", title: "2-3. 학교일지 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTM0MTQ2NjR8RHww" },
+            { id: "a-2-4", title: "2-4. 월중 및 주간행사", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4NzQyMDg3Nzd8RHww" },
+            { id: "a-2-5", title: "2-5. 학교정보공시", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDc1OTQ1MDV8RHww" },
+            { id: "a-2-6", title: "2-6. 학교 누리집", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDc4Njc2NTd8RHww" },
+            { id: "a-2-7", title: "2-7. 가정통신문", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDgyNDA2NDl8RHww" },
+            { id: "a-2-8", title: "2-8. 수상대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDg0ODAwMDh8RHww" },
+            { id: "a-2-9", title: "2-9. 나이스 학부모 서비스 승인 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDg4MDQ4NzJ8RHww" },
+            { id: "a-2-10", title: "2-10. 홍보관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDkwNDYwMjR8RHww" },
+            { id: "a-2-11", title: "2-11. 교육과정 운영 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDkzMjY2MDB8RHww" },
+            { id: "a-2-12", title: "2-12. 교무실 기자재 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDk1ODgyMzN8RHww" },
+            { id: "a-2-13", title: "2-13. 개인정보 보호 및 저작권", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDk4NTkwODF8RHww" },
+            { id: "a-2-14", title: "2-14. 각종 대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTAwNTcyMjR8RHww" },
+            { id: "a-2-15", title: "2-15. 간행물", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTAyMTc5OTN8RHww" }                                                
+        ]
+    },
+    "3. 업무효율 도움자료": {
+        icon: "fas fa-question-circle",
+        color: "violet",
+        items: [
+            { id: "a-3-1", title: "3-1. 아이톡톡 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEwODA4MjQzMjl8RHww" },
+            { id: "a-3-2", title: "3-2. 업무효율을 높이는 프로그램 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEwODE3MzM4OTZ8RHww" },
+            { id: "a-3-3", title: "3-3. 참고 사이트 및 자료 안내", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzU3MzY1NjE0MTZ8RHww" }
+        ]
+    }
+};
+
+const staffData = {
+    "1. 교무행정 업무-1": {
+        icon: "fas fa-clipboard-list",
+        color: "emerald",
+        items: [
+            { 
+                id: "st-1-1", 
+                title: "1-1. 교무행정 업무-1", 
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk4NDAxMzZ8RHww" 
+            }
+        ]
+    },
     "2. 인사": {
         icon: "fas fa-users-cog",
         color: "pink",
@@ -510,42 +554,6 @@ const adminData = {
         color: "teal",
         items: [
             { id: "a-7-1", title: "7-1. 감사일반", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LsCWyGFpVqw6NLVCVs97cA.T-J1fYSt_52tXxrswokSNkp-JJdnREo5OgkQ-CQw0YDPFf_BmX27iV2UgOnfmY4QKsQ3b56aYFuvHNKBZEzbKg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc5MDE0NTc5Mjh8RHww" }
-        ]
-    }
-};
-
-const staffData = {
-    "1. 교무행정 업무-1": {
-        icon: "fas fa-clipboard-list",
-        color: "emerald",
-        items: [
-            { 
-                id: "st-1-1", 
-                title: "1-1. 교무행정 업무-1", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk4NDAxMzZ8RHww" 
-            }
-        ]
-    },
-    "2. 교무행정 업무-2": {
-        icon: "fas fa-tasks",
-        color: "fuchsia",
-        items: [
-            { 
-                id: "st-2-1", 
-                title: "2-1. 교무행정 업무-2", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk3MTgyODB8RHww" 
-            }
-        ]
-    },
-    "3. 그 외 도움자료": {
-        icon: "fas fa-question-circle",
-        color: "violet",
-        items: [
-            { 
-                id: "st-3-1", 
-                title: "3-1. 그 외 도움자료", 
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/4LTLN6cRYyilDAI08zcZtw.S_xboTaC-6ZIUgECov38DatgOs0rgCKr9ZEjKbEqS4YYTUD5jtG4SE1X5i7WPQfc6GRce5cfv_czmIqcLVcHlg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTkxODk0OTM1MTN8RHww" 
-            }
         ]
     }
 };
