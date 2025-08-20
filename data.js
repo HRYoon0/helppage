@@ -271,6 +271,13 @@ const elementaryData = {
             { id: "e-7-5", title: "7-5. 체육시설 및 체육 기자재 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDU3OTA1ODE3Njh8RHww" },
             { id: "e-7-6", title: "7-6. 보건업무", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDU3ODk4OTI4NzJ8RHww" }
         ]
+    },
+    "8. (초등)교감업무도움자료": {
+        icon: "fas fa-tasks", 
+        color: "teal",
+        items: [
+            { id: "e-8-1", title: "8-1. (초등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MTEzMDU1MzAxMjB8RHww" },
+        ]
     }
 };
 
@@ -391,6 +398,13 @@ const secondaryData = {
             { id: "s-7-6-2", title: "7-6-2. 감염병 예방 및 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzY4MDIxODEzODR8RHww" },
             { id: "s-7-6-3", title: "7-6-3. 학교 환경 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzY4MDIyNDk3Mzd8RHww" },
             { id: "s-7-7-1", title: "7-7-1. 학교흡연예방교육", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzY4MDIzNjY3Mjh8RHww" }
+        ]
+    },
+    "8. (중등)교감업무도움자료": {
+        icon: "fas fa-tasks",
+        color: "lime",
+        items: [
+            { id: "s-8-1", title: "8-1. (중등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MTc1NjQ4MTEyNzN8RHww" },
         ]
     }
 };
