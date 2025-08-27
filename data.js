@@ -404,7 +404,7 @@ const secondaryData = {
         icon: "fas fa-tasks",
         color: "lime",
         items: [
-            { id: "s-8-1", title: "8-1. (중등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MTc1NjQ4MTEyNzN8RHww" },
+            { id: "s-8-1", title: "8-1. (중등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MTEzMDU4MTE0NjV8RHww" },
         ]
     }
 };
