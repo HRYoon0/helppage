@@ -6,7 +6,7 @@ const kindergartenData = {
             {
                 id: "k-0-1",
                 title: "0. 일러두기 및 목록",
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA4NTc4OTcwNzM2NzJ8RHww"
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzIzNzI0ODh8RHww"
             }
         ]
     },
