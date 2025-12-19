@@ -468,7 +468,7 @@ const adminData = {
             {
                 id: "a-0-1",
                 title: "0. 일러두기 및 목록",
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MDE4MTEwNDEyODh8RHww"
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyOTY5MDV8RHww"
             }
         ]
     },
@@ -476,39 +476,39 @@ const adminData = {
         icon: "fas fa-archive",
         color: "emerald",
         items: [
-            { id: "a-1-1", title: "1-1. 업무포털", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTI3NTc3Njl8RHww" },
-            { id: "a-1-2", title: "1-2. 에듀파인", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTI4OTcyODh8RHww" },
-            { id: "a-1-3", title: "1-3. 나이스", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTMzOTU5NzZ8RHww" }
+            { id: "a-1-1", title: "1-1. 업무포털", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMDM1NjB8RHww" },
+            { id: "a-1-2", title: "1-2. 에듀파인", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMDU4NjR8RHww" },
+            { id: "a-1-3", title: "1-3. 나이스", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMDgxNjh8RHww" }
         ]
     },
     "2. 교무행정업무": {
         icon: "fas fa-tasks",
         color: "fuchsia",
         items: [
-            { id: "a-2-1", title: "2-1. 전입 전출 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTIyODUxOTN8RHww" },
-            { id: "a-2-2", title: "2-2. 교과용도서", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTMyNjM4ODF8RHww" },
-            { id: "a-2-3", title: "2-3. 학교일지 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4MTM0MTQ2NjR8RHww" },
-            { id: "a-2-4", title: "2-4. 월중 및 주간행사", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzM4NzQyMDg3Nzd8RHww" },
-            { id: "a-2-5", title: "2-5. 학교정보공시", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDc1OTQ1MDV8RHww" },
-            { id: "a-2-6", title: "2-6. 학교 누리집", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDc4Njc2NTd8RHww" },
-            { id: "a-2-7", title: "2-7. 가정통신문", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDgyNDA2NDl8RHww" },
-            { id: "a-2-8", title: "2-8. 수상대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDg0ODAwMDh8RHww" },
-            { id: "a-2-9", title: "2-9. 나이스 학부모 서비스 승인 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDg4MDQ4NzJ8RHww" },
-            { id: "a-2-10", title: "2-10. 홍보관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDkwNDYwMjR8RHww" },
-            { id: "a-2-11", title: "2-11. 교육과정 운영 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDkzMjY2MDB8RHww" },
-            { id: "a-2-12", title: "2-12. 교무실 기자재 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDk1ODgyMzN8RHww" },
-            { id: "a-2-13", title: "2-13. 개인정보 보호 및 저작권", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNDk4NTkwODF8RHww" },
-            { id: "a-2-14", title: "2-14. 각종 대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTAwNTcyMjR8RHww" },
-            { id: "a-2-15", title: "2-15. 간행물", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQwNTAyMTc5OTN8RHww" }                                                
+            { id: "a-2-1", title: "2-1. 전입 전출 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTEyNDB8RHww" },
+            { id: "a-2-2", title: "2-2. 교과용도서", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTMyODl8RHww" },
+            { id: "a-2-3", title: "2-3. 학교일지 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTQ4MjV8RHww" },
+            { id: "a-2-4", title: "2-4. 월중 및 주간행사", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTcxMjl8RHww" },
+            { id: "a-2-5", title: "2-5. 학교정보공시", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTg2NjV8RHww" },
+            { id: "a-2-6", title: "2-6. 학교 누리집", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMTk2ODh8RHww" },
+            { id: "a-2-7", title: "2-7. 가정통신문", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMjIyNDh8RHww" },
+            { id: "a-2-8", title: "2-8. 수상대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMjk5Mjl8RHww" },
+            { id: "a-2-9", title: "2-9. 나이스 학부모 서비스 승인 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMjg2NDh8RHww" },
+            { id: "a-2-10", title: "2-10. 홍보관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMzU4MTZ8RHww" },
+            { id: "a-2-11", title: "2-11. 교육과정 운영 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzMzg4ODh8RHww" },
+            { id: "a-2-12", title: "2-12. 교무실 기자재 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNDIyMTd8RHww" },
+            { id: "a-2-13", title: "2-13. 개인정보 보호 및 저작권", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNDI0NzJ8RHww" },
+            { id: "a-2-14", title: "2-14. 각종 대장 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNDUwMzN8RHww" },
+            { id: "a-2-15", title: "2-15. 간행물", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNDc4NDh8RHww" }                                                
         ]
     },
     "3. 업무효율 도움자료": {
         icon: "fas fa-question-circle",
         color: "violet",
         items: [
-            { id: "a-3-1", title: "3-1. 아이톡톡 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEwODA4MjQzMjl8RHww" },
-            { id: "a-3-2", title: "3-2. 업무효율을 높이는 프로그램 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEwODE3MzM4OTZ8RHww" },
-            { id: "a-3-3", title: "3-3. 참고 사이트 및 자료 안내", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzU3MzY1NjE0MTZ8RHww" }
+            { id: "a-3-1", title: "3-1. 아이톡톡 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNTI3MTJ8RHww" },
+            { id: "a-3-2", title: "3-2. 업무효율을 높이는 프로그램 활용", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNTY1NTN8RHww" },
+            { id: "a-3-3", title: "3-3. 참고 사이트 및 자료 안내", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNTg2MDB8RHww" }
         ]
     }
 };
@@ -521,7 +521,7 @@ const staffData = {
             {
                 id: "st-0-1",
                 title: "0. 일러두기 및 목록",
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MDE4MDkyOTMwNjV8RHww"
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNjY1Mzd8RHww"
             }
         ]
     },
@@ -529,61 +529,61 @@ const staffData = {
         icon: "fas fa-clipboard-list",
         color: "emerald",
         items: [
-            { id: "st-1-1", title: "1-1. 민원행정공개", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTQwNjEzMzA5NTJ8RHww" },
-            { id: "st-1-2", title: "1-2. 행정업무운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTM1NzAyNDg0NTd8RHww" },
-            { id: "st-1-3", title: "1-3. 보안관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTQ4NTIwMjc2NTZ8RHww" }
+            { id: "st-1-1", title: "1-1. 민원행정공개", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzOTIzOTN8RHww" },
+            { id: "st-1-2", title: "1-2. 행정업무운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzOTY3NDR8RHww" },
+            { id: "st-1-3", title: "1-3. 보안관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzOTg1Mzd8RHww" }
         ]
     },
     "2. 인사": {
         icon: "fas fa-users-cog",
         color: "pink",
         items: [
-            { id: "st-2-1", title: "2-1. 지방공무원인사", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTQwNjE0OTI3NDV8RHww" },
-            { id: "st-2-2", title: "2-2. 교육공무직원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDQ2MTU5MDg2MTd8RHww" },
-            { id: "st-2-3", title: "2-3. 복무관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTQ4NTIzNjA0NTd8RHww" },
-            { id: "st-2-4", title: "2-4. 보수관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDkyOTA3ODE3MDR8RHww" }
+            { id: "st-2-1", title: "2-1. 지방공무원인사", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MDE4NjV8RHww" },
+            { id: "st-2-2", title: "2-2. 교육공무직원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MDYyMTd8RHww" },
+            { id: "st-2-3", title: "2-3. 복무관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MDk1NDV8RHww" },
+            { id: "st-2-4", title: "2-4. 보수(급여)관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MTEzMzZ8RHww" }
         ]
     },
     "3. 학교회계": {
         icon: "fas fa-calculator",
         color: "fuchsia",
         items: [
-            { id: "st-3-1", title: "3-1. 예결산 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTQwNjE1OTEzMDR8RHww" },
-            { id: "st-3-2", title: "3-2. 수입관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDkyMzA5MjA3MTJ8RHww" },
-            { id: "st-3-3", title: "3-3. 지출관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDkyMzA5MjA5Njl8RHww" },
-            { id: "st-3-4", title: "3-4. 계약관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDkyMzA5MjI3NjB8RHww" },
-            { id: "st-3-5", title: "3-5. 세입세출외현금", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDkyMzA5MjUzMjB8RHww" },
-            { id: "st-3-6", title: "3-6. 학교발전기금", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTQ4NTI4NzYwNDF8RHww" }
+            { id: "st-3-1", title: "3-1. 예결산 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MTM4OTZ8RHww" },
+            { id: "st-3-2", title: "3-2. 수입관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MTc5OTJ8RHww" },
+            { id: "st-3-3", title: "3-3. 지출관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MjMzNjl8RHww" },
+            { id: "st-3-4", title: "3-4. 계약관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MjU0MTd8RHww" },
+            { id: "st-3-5", title: "3-5. 세입세출외현금", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MjQxMzZ8RHww" },
+            { id: "st-3-6", title: "3-6. 학교발전기금", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MjU5Mjh8RHww" }
         ]
     },
     "4. 시설ㆍ물품ㆍ재산": {
         icon: "fas fa-solid fa-credit-card",
         color: "cyan",
         items: [
-            { id: "st-4-1", title: "4-1. 학교시설관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTUyMjQwNDQ4MDh8RHww" },
-            { id: "st-4-2", title: "4-2. 물품관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTUyMjQ0ODAyNjR8RHww" },
-            { id: "st-4-3", title: "4-3. 공유재산관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ3OTUyMjQ3OTcxOTN8RHww" }
+            { id: "st-4-1", title: "4-1. 학교시설관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MjkyNTZ8RHww" },
+            { id: "st-4-2", title: "4-2. 물품관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0MzEzMDR8RHww" },
+            { id: "st-4-3", title: "4-3. 공유재산관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzM0NDY0MDl8RHww" }
         ]
     },
     "5. 학교운영위원회": {
         icon: "fas fa-landmark",
         color: "lime",
         items: [
-            { id: "st-5-1", title: "5-1. 학교운영위원회", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTM1NzExMjA2NDh8RHww" }
+            { id: "st-5-1", title: "5-1. 학교운영위원회", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzNzg1Njh8RHww" }
         ]
     },
     "6. 신설학교": {
         icon: "fas fa-solid fa-school",
         color: "violet",
         items: [
-            { id: "st-6-1", title: "6-1. 신설학교", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTM1NzE5NTY3NDV8RHww" }
+            { id: "st-6-1", title: "6-1. 신설학교", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzODg1NTN8RHww" }
         ]
     },
     "7. 감사일반": {
         icon: "fas fa-gavel",
         color: "teal",
         items: [
-            { id: "st-7-1", title: "7-1. 감사일반", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NTM1NzI2NTUzNjh8RHww" }
+            { id: "st-7-1", title: "7-1. 감사일반", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMzOTA2MDF8RHww" }
         ]
     }
 };
