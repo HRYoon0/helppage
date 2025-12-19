@@ -276,7 +276,14 @@ const elementaryData = {
         icon: "fas fa-tasks", 
         color: "teal",
         items: [
-            { id: "e-8-1", title: "8-1. (초등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzI1NDI5ODR8RHww" },
+            { id: "e-8-1", title: "8-1. (초등)교감업무도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzI1NDI5ODR8RHww" }
+        ]
+    },
+    "9. 저연차(신규, 저경력) 업무 도움자료": {
+        icon: "fas fa-question-circle", 
+        color: "indigo",
+        items: [
+            { id: "e-9-1", title: "9-1. 저연차(신규, 저경력) 업무 도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk2NTQ5ODU5OTN8RHww" }
         ]
     }
 };
