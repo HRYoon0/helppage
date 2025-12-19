@@ -424,7 +424,7 @@ const specialData = {
             {
                 id: "sp-0-1",
                 title: "0. 일러두기 및 목록",
-                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDQ4MDE4MDc0MTUwNDh8RHww"
+                url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNTUxNzZ8RHww"
             }
         ]
     },
@@ -432,30 +432,30 @@ const specialData = {
         icon: "fas fa-sitemap",
         color: "violet",
         items: [
-            { id: "sp-1-1", title: "1-1. 특수학교 교육과정 편성 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQ5NDM1NzIyMzJ8RHww" },
-            { id: "sp-1-2", title: "1-2. 특수학급 및 통합학급 교육과정 편성 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5MzQ5NDU3NTc5NjB8RHww" },
-            { id: "sp-1-3", title: "1-3. 장애학생 평가 조정", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDMzNjc5MDkxMjl8RHww" },
-            { id: "sp-1-4", title: "1-4. 진로 및 직업교육 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5Mzg3MDI1MDU0ODB8RHww" },
-            { id: "sp-1-5", title: "1-5. 특수학교 전공과 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5Mzg3MDM4MzcxOTJ8RHww" }
+            { id: "sp-1-1", title: "1-1. 특수학교 교육과정 편성 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNjgyMzN8RHww" },
+            { id: "sp-1-2", title: "1-2. 특수학급 및 통합학급 교육과정 편성 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNjk1MTJ8RHww" },
+            { id: "sp-1-3", title: "1-3. 장애학생 평가 조정", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNzEzMDR8RHww" },
+            { id: "sp-1-4", title: "1-4. 진로 및 직업교육 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNzI4NDB8RHww" },
+            { id: "sp-1-5", title: "1-5. 특수학교 전공과 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNzUxNDR8RHww" }
         ]
     },
     "2. 개별화 교육계획 작성 활용": {
         icon: "fas fa-file-signature",
         color: "pink",
         items: [
-            { id: "sp-2-1", title: "2-1. 개별화교육지원팀 구성", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEzMTEyOTQ0NzN8RHww" },
-            { id: "sp-2-2", title: "2-2. 개별화교육계획 수립 및 평가", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEzMTE1MjQ2MTd8RHww" }
+            { id: "sp-2-1", title: "2-1. 개별화교육지원팀 구성", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNzY5Mzd8RHww" },
+            { id: "sp-2-2", title: "2-2. 개별화교육계획 수립 및 평가", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyNzkyNDF8RHww" }
         ]
     },
     "3. 특수교육대상자 학적 관리": {
         icon: "fas fa-address-book",
         color: "green",
         items: [
-            { id: "sp-3-1", title: "3-1. 특수교육대상자 선정ㆍ배치", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDU4NjUxNjYzNDV8RHww" },
-            { id: "sp-3-2", title: "3-2. 치료지원비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDEzMDIwODM1OTJ8RHww" },
-            { id: "sp-3-3", title: "3-3. 특기적성교육비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDMzNTg2MzU3ODV8RHww" },
-            { id: "sp-3-4", title: "3-4. 통학비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5Mzg3MDQ2MTIzNjB8RHww" },
-            { id: "sp-3-5", title: "3-5. 취학유예 및 면제, 재취학, 정원 외 학적 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/kcaK-njUmKAp52M-rYO88w.StG6xLQ66X3uMIxB6oBYhTS9594BpzHcCjcL6pMCR7n_0UWUAgg5aYmJQ4EklIJlg5iRqUWp_n6Ymgg1mOIozg?resourceKey=MTAwMDAxNTAxOTEzMDcyfDM0NzI2MDA5NDU4NjUzNjk4NjR8RHww" }
+            { id: "sp-3-1", title: "3-1. 특수교육대상자 선정ㆍ배치", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyODA3NzZ8RHww" },
+            { id: "sp-3-2", title: "3-2. 치료지원비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyODQ2MTd8RHww" },
+            { id: "sp-3-3", title: "3-3. 특기적성교육비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyODY0MDh8RHww" },
+            { id: "sp-3-4", title: "3-4. 통학비 지원", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyOTIwNDF8RHww" },
+            { id: "sp-3-5", title: "3-5. 취학유예 및 면제, 재취학, 정원 외 학적 관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/AFeqxnucl3zu-Boi8VYOrw.ACWb2wrjzbUJjc0m3JfayTewkCnsufso_uWyt5QQNu8Fl4hvGokD3EP_FBpoVP_fxompB1HzHG5BIikZXpvunA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg1Mzk1MzMyOTQ2MDB8RHww" }
         ]
     }
 };
