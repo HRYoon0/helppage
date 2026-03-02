@@ -14,10 +14,112 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
         }
+
+        /* 그라데이션 + 블롭 배경 */
+        .bg-blob-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .bg-blob-wrap .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+        .bg-blob-wrap .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #a5b4fc, #c4b5fd);
+            top: -100px;
+            left: -100px;
+            opacity: 0.4;
+            animation: blobFloat 20s ease-in-out infinite alternate;
+        }
+        .bg-blob-wrap .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #93c5fd, #a5f3fc);
+            bottom: -80px;
+            right: -80px;
+            opacity: 0.4;
+            animation: blobFloat 20s ease-in-out infinite alternate;
+            animation-delay: -10s;
+        }
+        .bg-blob-wrap .blob-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, #f9a8d4, #fda4af);
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+            animation: blobFloat2 25s ease-in-out infinite alternate;
+        }
+        @keyframes blobFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+            100% { transform: translate(-30px, 60px) scale(0.95); }
+        }
+        @keyframes blobFloat2 {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-40%, -45%) scale(1.15); }
+            100% { transform: translate(-55%, -55%) scale(0.9); }
+        }
+        /* 카드 등장 애니메이션 */
+        @keyframes cardEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-6px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .card-entrance {
+            opacity: 0;
+            animation: cardEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        /* 스프링 바운스 슬라이드 애니메이션 */
+        .slide-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transform: translateY(-8px);
+            transition: grid-template-rows 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.3s ease,
+                        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .slide-content > * {
+            overflow: hidden;
+        }
+        .slide-content.open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            transform: translateY(0);
+            transition: grid-template-rows 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        opacity 0.4s ease 0.05s,
+                        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <header class="bg-white shadow-sm border-b border-gray-200">
+<body class="min-h-screen" style="background: linear-gradient(135deg, #e0e7ff 0%, #f0e6ff 30%, #fce7f3 60%, #e0f2fe 100%);">
+    <div class="bg-blob-wrap">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <header class="bg-white/30 backdrop-blur-md shadow-sm border-b border-gray-200/30">
         <div class="max-w-6xl mx-auto px-4 py-6">
             <h1 class="text-center text-3xl font-bold text-gray-900">경상남도교육청 학교업무 도움자료</h1>
             <p class="text-center text-gray-600 mt-2">학교 업무에 필요한 자료를 쉽게 찾아보세요!</p>
@@ -26,7 +128,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 0ms;">
                 <button
                     onclick="toggleSection('kindergarten')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -43,24 +145,28 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="kindergarten-arrow"></i>
                 </button>
                 
-                <div id="kindergarten-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                    <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="kindergarten-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                                oninput="searchKindergarten()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="kindergarten-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="kindergarten-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                                        oninput="searchKindergarten()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="kindergarten-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="kindergarten-sections" class="p-4"></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 80ms;">
                 <button
                     onclick="toggleSection('elementary')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -77,24 +183,28 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="elementary-arrow"></i>
                 </button>
                 
-                <div id="elementary-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                     <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="elementary-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200"
-                                oninput="searchElementary()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="elementary-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="elementary-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200"
+                                        oninput="searchElementary()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="elementary-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="elementary-sections" class="p-4"></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 160ms;">
                 <button
                     onclick="toggleSection('secondary')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -111,24 +221,28 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="secondary-arrow"></i>
                 </button>
                 
-                <div id="secondary-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                    <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="secondary-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
-                                oninput="searchSecondary()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="secondary-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="secondary-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                                        oninput="searchSecondary()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="secondary-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="secondary-sections" class="p-4"></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 240ms;">
                 <button
                     onclick="toggleSection('special')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -145,24 +259,28 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="special-arrow"></i>
                 </button>
                 
-                <div id="special-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                    <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="special-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200"
-                                oninput="searchSpecial()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="special-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="special-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors duration-200"
+                                        oninput="searchSpecial()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="special-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="special-sections" class="p-4"></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 320ms;">
                 <button
                     onclick="toggleSection('admin')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -179,24 +297,28 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="admin-arrow"></i>
                 </button>
                 
-                <div id="admin-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                    <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="admin-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-colors duration-200"
-                                oninput="searchAdmin()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="admin-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="admin-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-colors duration-200"
+                                        oninput="searchAdmin()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="admin-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="admin-sections" class="p-4"></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 400ms;">
                 <button
                     onclick="toggleSection('staff')"
                     class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 rounded-t-lg"
@@ -213,26 +335,30 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="staff-arrow"></i>
                 </button>
                 
-                <div id="staff-content" class="hidden border-t border-gray-100 rounded-b-lg">
-                    <div class="p-4 bg-gray-50">
-                        <div class="relative">
-                            <input
-                                type="text"
-                                id="staff-search"
-                                placeholder="원하는 업무를 검색해 보세요."
-                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
-                                oninput="searchStaff()"
-                            >
-                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                <div id="staff-content" class="slide-content rounded-b-lg">
+                    <div>
+                        <div class="border-t border-gray-100">
+                            <div class="p-4 bg-gray-50">
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="staff-search"
+                                        placeholder="원하는 업무를 검색해 보세요."
+                                        class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200"
+                                        oninput="searchStaff()"
+                                    >
+                                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div id="staff-sections" class="p-4"></div>
                         </div>
                     </div>
-                    <div id="staff-sections" class="p-4"></div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-16">
+    <footer class="bg-white/30 backdrop-blur-md border-t border-gray-200/30 fixed bottom-0 left-0 w-full" style="z-index: 10;">
         <div class="max-w-6xl mx-auto px-4 py-6">
             <p class="text-center text-gray-600 text-sm">© 경상남도교육청 모든 권리 보유</p>
         </div>

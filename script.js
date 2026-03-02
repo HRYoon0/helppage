@@ -9,11 +9,11 @@ let staffSectionsRendered = false;
 function toggleSection(sectionId) {
     const content = document.getElementById(`${sectionId}-content`);
     const arrow = document.getElementById(`${sectionId}-arrow`);
-    
-    if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
+
+    if (!content.classList.contains('open')) {
+        content.classList.add('open');
         if (arrow) arrow.style.transform = 'rotate(180deg)';
-        
+
         const button = arrow ? arrow.closest('button') : document.querySelector(`button[onclick="toggleSection('${sectionId}')"]`);
         if (button) {
             button.classList.remove('rounded-lg');
@@ -26,7 +26,7 @@ function toggleSection(sectionId) {
         } else if (sectionId === 'elementary' && !elementarySectionsRendered) {
             renderElementarySections();
             elementarySectionsRendered = true;
-        } else if (sectionId === 'secondary' && !secondarySectionsRendered) { 
+        } else if (sectionId === 'secondary' && !secondarySectionsRendered) {
             renderSecondarySections();
             secondarySectionsRendered = true;
         } else if (sectionId === 'special' && !specialSectionsRendered) {
@@ -38,12 +38,14 @@ function toggleSection(sectionId) {
         } else if (sectionId === 'staff' && !staffSectionsRendered) {
             renderStaffSections();
             staffSectionsRendered = true;
+        } else {
+            replaySubSectionAnimations(sectionId);
         }
 
     } else {
-        content.classList.add('hidden');
+        content.classList.remove('open');
         if (arrow) arrow.style.transform = 'rotate(0deg)';
-        
+
         const button = arrow ? arrow.closest('button') : document.querySelector(`button[onclick="toggleSection('${sectionId}')"]`);
         if (button) {
             button.classList.remove('rounded-t-lg');
@@ -55,8 +57,8 @@ function toggleSection(sectionId) {
 function renderKindergartenSections() {
     const container = document.getElementById('kindergarten-sections');
     container.innerHTML = '';
-    Object.entries(kindergartenData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'kindergarten', 'toggleKindergartenSubSection');
+    Object.entries(kindergartenData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'kindergarten', 'toggleKindergartenSubSection', index);
         container.appendChild(sectionElement);
     });
 }
@@ -64,8 +66,8 @@ function renderKindergartenSections() {
 function renderElementarySections() {
     const container = document.getElementById('elementary-sections');
     container.innerHTML = '';
-    Object.entries(elementaryData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'elementary', 'toggleElementarySubSection');
+    Object.entries(elementaryData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'elementary', 'toggleElementarySubSection', index);
         container.appendChild(sectionElement);
     });
 }
@@ -73,8 +75,8 @@ function renderElementarySections() {
 function renderSecondarySections() {
     const container = document.getElementById('secondary-sections');
     container.innerHTML = '';
-    Object.entries(secondaryData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'secondary', 'toggleSecondarySubSection');
+    Object.entries(secondaryData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'secondary', 'toggleSecondarySubSection', index);
         container.appendChild(sectionElement);
     });
 }
@@ -82,8 +84,8 @@ function renderSecondarySections() {
 function renderSpecialSections() {
     const container = document.getElementById('special-sections');
     container.innerHTML = '';
-    Object.entries(specialData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'special', 'toggleSpecialSubSection');
+    Object.entries(specialData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'special', 'toggleSpecialSubSection', index);
         container.appendChild(sectionElement);
     });
 }
@@ -91,8 +93,8 @@ function renderSpecialSections() {
 function renderAdminSections() {
     const container = document.getElementById('admin-sections');
     container.innerHTML = '';
-    Object.entries(adminData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'admin', 'toggleAdminSubSection');
+    Object.entries(adminData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'admin', 'toggleAdminSubSection', index);
         container.appendChild(sectionElement);
     });
 }
@@ -100,16 +102,17 @@ function renderAdminSections() {
 function renderStaffSections() {
     const container = document.getElementById('staff-sections');
     container.innerHTML = '';
-    Object.entries(staffData).forEach(([sectionTitle, sectionData]) => {
-        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'staff', 'toggleStaffSubSection');
+    Object.entries(staffData).forEach(([sectionTitle, sectionData], index) => {
+        const sectionElement = createDetailedSectionHTML(sectionTitle, sectionData, 'staff', 'toggleStaffSubSection', index);
         container.appendChild(sectionElement);
     });
 }
 
 
-function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) {
+function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName, index = 0) {
     const sectionElement = document.createElement('div');
-    sectionElement.className = 'mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-xs';
+    sectionElement.className = 'mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-xs card-entrance';
+    sectionElement.style.animationDelay = `${index * 60}ms`;
     
     const sectionId = `${typePrefix}-section-${title.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
     
@@ -127,20 +130,24 @@ function createDetailedSectionHTML(title, data, typePrefix, toggleFunctionName) 
             <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200" id="${sectionId}-arrow"></i>
         </button>
         
-        <div id="${sectionId}-content" class="hidden bg-gray-50 border-t border-gray-200">
-            ${data.items.map(item => `
-                <div class="px-4 py-2 border-b border-gray-100 last:border-b-0">
-                    <a 
-                        href="${item.url}" 
-                        target="_blank"
-                        class="flex items-center text-gray-700 hover:text-${data.color}-600 hover:bg-white p-2 rounded-md transition-all duration-200 group"
-                    >
-                        <i class="fas fa-file-alt text-gray-400 group-hover:text-${data.color}-500 mr-3 text-sm\\"></i>
-                        <span class="text-sm flex-grow">${item.title}</span>
-                        <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${data.color}-400 ml-2 text-xs flex-shrink-0\\"></i>
-                    </a>
+        <div id="${sectionId}-content" class="slide-content">
+            <div>
+                <div class="bg-gray-50 border-t border-gray-200">
+                    ${data.items.map(item => `
+                        <div class="px-4 py-2 border-b border-gray-100 last:border-b-0">
+                            <a
+                                href="${item.url}"
+                                target="_blank"
+                                class="flex items-center text-gray-700 hover:text-${data.color}-600 hover:bg-white p-2 rounded-md transition-all duration-200 group"
+                            >
+                                <i class="fas fa-file-alt text-gray-400 group-hover:text-${data.color}-500 mr-3 text-sm"></i>
+                                <span class="text-sm flex-grow">${item.title}</span>
+                                <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${data.color}-400 ml-2 text-xs flex-shrink-0"></i>
+                            </a>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('')}
+            </div>
         </div>
     `;
     
@@ -175,13 +182,13 @@ function toggleStaffSubSection(sectionId) {
 function toggleDetailedSubSection(sectionId) {
     const content = document.getElementById(`${sectionId}-content`);
     const arrow = document.getElementById(`${sectionId}-arrow`);
-    
-    if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        arrow.style.transform = 'rotate(180deg)';
+
+    if (!content.classList.contains('open')) {
+        content.classList.add('open');
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
     } else {
-        content.classList.add('hidden');
-        arrow.style.transform = 'rotate(0deg)';
+        content.classList.remove('open');
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
     }
 }
 
@@ -234,8 +241,8 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
                 const sectionId = `${typePrefix}-section-${sectionTitle.replace(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/g, '')}`.replace(/\\./g, '-');
                 const content = document.getElementById(`${sectionId}-content`);
                 const arrow = document.getElementById(`${sectionId}-arrow`);
-                if (content && !content.classList.contains('hidden')) { 
-                    content.classList.add('hidden');
+                if (content && content.classList.contains('open')) {
+                    content.classList.remove('open');
                     if(arrow) arrow.style.transform = 'rotate(0deg)';
                 }
             });
@@ -282,11 +289,23 @@ function searchDetailedItems(searchTerm, dataObject, containerElement, typePrefi
                 const content = document.getElementById(`${sectionId}-content`);
                 const arrow = document.getElementById(`${sectionId}-arrow`);
                 if (content && arrow) {
-                    content.classList.remove('hidden');
+                    content.classList.add('open');
                     arrow.style.transform = 'rotate(180deg)';
                 }
             }, 50); 
         }
+    });
+}
+
+function replaySubSectionAnimations(sectionId) {
+    const container = document.getElementById(`${sectionId}-sections`);
+    if (!container) return;
+    const items = container.querySelectorAll('.card-entrance');
+    items.forEach((el, i) => {
+        el.classList.remove('card-entrance');
+        void el.offsetWidth;
+        el.style.animationDelay = `${i * 60}ms`;
+        el.classList.add('card-entrance');
     });
 }
 
