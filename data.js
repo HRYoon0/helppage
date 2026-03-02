@@ -303,8 +303,8 @@ const elementaryData = {
         icon: "fas fa-seedling",
         color: "lime",
         items: [
-            { id: "e-9-1", title: "9-1. 2026 신규교사 첫 출근 도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjcwNjAyMjUyODl8RHww" },
-            { id: "e-9-2", title: "9-2. 2026 저경력교사 첫 업무 도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjcwNjAyMjYzMTN8RHww" }
+            { id: "e-9-1", title: "9-01. 2026 신규교사 첫 출근 도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjcwNjAyMjUyODl8RHww" },
+            { id: "e-9-2", title: "9-02. 2026 저경력교사 첫 업무 도움자료", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjcwNjAyMjYzMTN8RHww" }
         ]
     }
 };
