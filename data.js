@@ -614,7 +614,7 @@ const staffData = {
         icon: "fas fa-clipboard-list",
         color: "emerald",
         items: [
-            { id: "st-1-1", title: "1-1. 민원정보 공개", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2Nzk4MzI4NDF8RHww" },
+            { id: "st-1-1", title: "1-1. 민원정보공개", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2Nzk4MzI4NDF8RHww" },
             { id: "st-1-2", title: "1-2. 행정업무운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2Nzk4MzMzNTN8RHww" },
             { id: "st-1-3", title: "1-3. 보안관리", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2Nzk4MzM4NjV8RHww" },
             { id: "st-1-4", title: "1-4. 산업안전보건", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2Nzk4NDQzNjF8RHww" }
