@@ -248,10 +248,11 @@ const elementaryData = {
             { id: "e-4-5", title: "4-05. 개인정보보호", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2NzAxNzUyNDB8RHww" },
             { id: "e-4-6", title: "4-06. 학교홈페이지 관리 및 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2NzAxNzU3NTJ8RHww" },
             { id: "e-4-7", title: "4-07. 나이스 운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2NzAxNzYwMDh8RHww" },
-            { id: "e-4-8", title: "4-08. AI디지털교과서", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2NzAxODIxNTN8RHww" }
+            { id: "e-4-8", title: "4-08. AI디지털교과서", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2NzAxODIxNTN8RHww" },
+            { id: "e-4-9", title: "4-09. 학습지원 소프트웨어 선정", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2NDA2ODI0MjEwMDF8RHww" }
         ]
     },
-    "5. 과(수)학ㆍ영재ㆍ환경": {
+    "5. 과학ㆍ수학ㆍ영재ㆍ환경": {
         icon: "fas fa-atom",
         color: "pink",
         items: [
@@ -382,7 +383,7 @@ const secondaryData = {
             { id: "s-4-8", title: "4-08. 학습지원 소프트웨어 선정", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODY5MzQ3OTN8RHww" }
         ]
     },
-    "5. 과학ㆍ영재ㆍ환경": {
+    "5. 과학ㆍ수학ㆍ영재ㆍ환경": {
         icon: "fas fa-microscope",
         color: "teal",
         items: [
@@ -393,7 +394,8 @@ const secondaryData = {
             { id: "s-5-5", title: "5-05. 영재학급운영", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODcwMjE4MzJ8RHww" },
             { id: "s-5-6", title: "5-06. 영재교육대상자 선발", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODcwMTQxNTN8RHww" },
             { id: "s-5-7", title: "5-07. 창의성교육", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODcwMjI2MDB8RHww" },
-            { id: "s-5-8", title: "5-08. 생태전환교육", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODcwMjQ2NDl8RHww" }
+            { id: "s-5-8", title: "5-08. 생태전환교육", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2MjY2ODcwMjQ2NDl8RHww" },
+            { id: "s-5-9", title: "5-09. 수학교육", url: "https://kr1-link.drive.worksmobile.com/shared-link/web/pubDLink/LwrRj-8TwfZ-nmz4EDtprw.jFsoV4ACA7d-X3-r_rgBB08k82ey8PQQJz4vZYAgq26G_lf3yb85_HgAoRnu4xPCOy74hA5MqbrF6qQ8ZIvHYA?resourceKey=MTAwMDAxNTA0NTAxNDU2fDM0NzI2MDg2NDEyMjE1NDA4NzN8RHww" }                
         ]
     },
     "6. 인성": {
