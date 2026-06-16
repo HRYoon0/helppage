@@ -332,6 +332,26 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 전체 통합 검색 (모든 카테고리 + 한글 초성 검색) -->
+        <div class="mb-8">
+            <div class="relative max-w-2xl mx-auto">
+                <input
+                    type="text"
+                    id="global-search"
+                    placeholder="전체 자료에서 검색 (초성도 가능 · 예: ㅇㅊㅇ)"
+                    class="w-full px-5 py-3 pl-12 rounded-full border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 bg-white/90"
+                    oninput="globalSearch()"
+                    autocomplete="off"
+                >
+                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- 통합 검색 결과 (검색 시에만 표시) -->
+        <div id="global-results" class="hidden relative z-10"></div>
+
+        <!-- 카테고리 탐색 뷰 (검색 중에는 숨김) -->
+        <div id="browse-view" class="relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 card-entrance" style="animation-delay: 0ms;">
                 <button
@@ -586,6 +606,7 @@
                 </span>
             </div>
         </a>
+        </div><!-- /browse-view -->
     </main>
 
     <footer class="bg-white/40 backdrop-blur-md border-t border-gray-200/20 fixed bottom-0 left-0 w-full" style="z-index: 10;">

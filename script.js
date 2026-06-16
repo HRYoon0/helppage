@@ -9,6 +9,16 @@ const CATEGORY_DATA = {
     staff: staffData,
 };
 
+// 카테고리 메타데이터 (통합 검색 결과 머리글용 — 라벨/아이콘/색, index.html 카드와 일치)
+const CATEGORY_META = {
+    kindergarten: { label: '유치원', icon: 'fas fa-child', color: 'blue' },
+    elementary:   { label: '초등학교', icon: 'fas fa-book', color: 'green' },
+    secondary:    { label: '중고등학교', icon: 'fas fa-chalkboard', color: 'purple' },
+    special:      { label: '특수학교(급)', icon: 'fas fa-heart', color: 'orange' },
+    admin:        { label: '교무행정', icon: 'fas fa-tag', color: 'amber' },
+    staff:        { label: '일반행정', icon: 'fas fa-file', color: 'red' },
+};
+
 // 카드별 '이미 렌더됨' 여부 (첫 펼침에만 렌더)
 const sectionsRendered = {};
 
@@ -216,4 +226,108 @@ function replaySubSectionAnimations(sectionId) {
         el.style.animationDelay = `${i * 60}ms`;
         el.classList.add('card-entrance');
     });
+}
+
+// ── 통합·초성 검색 ───────────────────────────────────────────────────
+const CHOSEONG = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+
+// 한글 음절의 초성만 뽑아 잇는다 (비한글은 그대로). 예: "유치원 규칙" → "ㅇㅊㅇ ㄱㅊ"
+function toChoseong(str) {
+    let out = '';
+    for (const ch of str) {
+        const code = ch.charCodeAt(0);
+        if (code >= 0xAC00 && code <= 0xD7A3) {
+            out += CHOSEONG[Math.floor((code - 0xAC00) / 588)];
+        } else {
+            out += ch;
+        }
+    }
+    return out;
+}
+
+// 질의가 초성 자모(ㄱ~ㅎ)로만 이뤄졌는가
+function isChoseongQuery(q) {
+    return /[ㄱ-ㅎ]/.test(q) && /^[ㄱ-ㅎ\s]+$/.test(q);
+}
+
+// 텍스트가 검색어에 매칭되는가 — 초성 질의면 초성끼리, 아니면 일반 부분일치
+function matchesQuery(text, query) {
+    const q = query.trim();
+    if (!q) return false;
+    if (isChoseongQuery(q)) {
+        return toChoseong(text).replace(/\s/g, '').includes(q.replace(/\s/g, ''));
+    }
+    return text.toLowerCase().includes(q.toLowerCase());
+}
+
+// 전체 카테고리를 한 번에 검색 → 결과 패널 렌더, 카테고리 탐색 뷰는 숨김
+function globalSearch() {
+    const input = document.getElementById('global-search');
+    const browse = document.getElementById('browse-view');
+    const results = document.getElementById('global-results');
+    if (!input || !browse || !results) return;
+
+    const term = input.value.trim();
+
+    // 검색어가 비면 탐색 뷰 복귀
+    if (!term) {
+        results.classList.add('hidden');
+        results.innerHTML = '';
+        browse.classList.remove('hidden');
+        return;
+    }
+
+    browse.classList.add('hidden');
+    results.classList.remove('hidden');
+
+    // 매칭 항목을 카테고리별로 수집
+    const groups = [];
+    let total = 0;
+    for (const [prefix, data] of Object.entries(CATEGORY_DATA)) {
+        const hits = [];
+        for (const [sectionTitle, section] of Object.entries(data)) {
+            const sectionHit = matchesQuery(sectionTitle, term);
+            for (const item of section.items) {
+                if (sectionHit || matchesQuery(item.title, term)) {
+                    hits.push({ sectionTitle, item, color: section.color });
+                }
+            }
+        }
+        if (hits.length) { groups.push({ prefix, hits }); total += hits.length; }
+    }
+
+    if (!total) {
+        results.innerHTML = `
+            <div class="text-center py-16 text-gray-500">
+                <i class="fas fa-search text-3xl mb-3"></i>
+                <p>"${escapeHtml(term)}"에 대한 검색 결과가 없습니다.</p>
+            </div>`;
+        return;
+    }
+
+    results.innerHTML =
+        `<p class="text-sm text-gray-500 mb-4">전체 검색 결과 <b class="text-gray-700">${total}</b>건</p>` +
+        groups.map(({ prefix, hits }) => {
+            const meta = CATEGORY_META[prefix] || { label: prefix, icon: 'fas fa-folder', color: 'gray' };
+            return `
+            <div class="mb-6">
+                <div class="flex items-center mb-2">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-${meta.color}-100 mr-2">
+                        <i class="${meta.icon} text-${meta.color}-600 text-sm"></i>
+                    </span>
+                    <span class="font-semibold text-gray-800">${escapeHtml(meta.label)}</span>
+                    <span class="text-xs text-gray-400 ml-2">${hits.length}건</span>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 divide-y divide-gray-100 overflow-hidden">
+                    ${hits.map(({ sectionTitle, item, color }) => `
+                        <a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center px-4 py-2.5 hover:bg-${color}-50 transition-colors duration-150 group">
+                            <i class="fas fa-file-alt text-gray-400 group-hover:text-${color}-500 mr-3 text-sm flex-shrink-0"></i>
+                            <span class="text-sm text-gray-700 flex-grow">${escapeHtml(item.title)}</span>
+                            <span class="text-xs text-gray-400 mr-2 hidden sm:inline">${escapeHtml(sectionTitle)}</span>
+                            <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${color}-400 text-xs flex-shrink-0"></i>
+                        </a>`).join('')}
+                </div>
+            </div>`;
+        }).join('');
 }
