@@ -1,0 +1,24 @@
+name: keepalive (예약 워크플로 자동중지 방지)
+
+# 공개 저장소의 예약 워크플로는 60일간 커밋(활동)이 없으면 자동 비활성화된다.
+# 매월 1일 빈 커밋을 하나 만들어 활동을 유지 → refresh-files 크론이 계속 살아있게 한다.
+on:
+  schedule:
+    - cron: '0 6 1 * *'   # 매월 1일 06:00 UTC = 15:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 빈 커밋으로 저장소 활동 유지
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "keepalive: 예약 워크플로 유지 (자동, 월 1회)"
+          git push
