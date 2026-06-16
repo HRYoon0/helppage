@@ -269,7 +269,14 @@ function clearGlobalSearch() {
     input.focus();
 }
 
-// 전체 카테고리를 한 번에 검색 → 결과 패널 렌더, 카테고리 탐색 뷰는 숨김
+// 검색 결과 필터 ('all' 전체 / 'folder' 폴더 / 'file' 파일)
+let searchFilter = 'all';
+function setSearchFilter(f) {
+    searchFilter = f;
+    globalSearch();
+}
+
+// 전체 카테고리(폴더 + 폴더 안 파일)를 한 번에 검색 → 결과 패널 렌더, 카테고리 탐색 뷰는 숨김
 function globalSearch() {
     const input = document.getElementById('global-search');
     const browse = document.getElementById('browse-view');
@@ -293,22 +300,33 @@ function globalSearch() {
     browse.classList.add('hidden');
     results.classList.remove('hidden');
 
-    // 매칭 항목을 카테고리별로 수집
+    // 카테고리별로 폴더 매칭 + 폴더 안 파일 매칭 수집
+    const hasFiles = typeof filesData !== 'undefined';
     const groups = [];
-    let total = 0;
+    let folderTotal = 0, fileTotal = 0;
     for (const [prefix, data] of Object.entries(CATEGORY_DATA)) {
-        const hits = [];
+        const folderHits = [], fileHits = [];
         for (const [sectionTitle, section] of Object.entries(data)) {
             const sectionHit = matchesQuery(sectionTitle, term);
             for (const item of section.items) {
                 if (sectionHit || matchesQuery(item.title, term)) {
-                    hits.push({ sectionTitle, item, color: section.color });
+                    folderHits.push({ title: item.title, url: item.url, sectionTitle, color: section.color });
+                }
+                if (hasFiles) {
+                    for (const fn of (filesData[item.id] || [])) {
+                        if (matchesQuery(fn, term)) {
+                            fileHits.push({ name: fn, folderTitle: item.title, url: item.url, color: section.color });
+                        }
+                    }
                 }
             }
         }
-        if (hits.length) { groups.push({ prefix, hits }); total += hits.length; }
+        folderTotal += folderHits.length;
+        fileTotal += fileHits.length;
+        if (folderHits.length || fileHits.length) groups.push({ prefix, folderHits, fileHits });
     }
 
+    const total = folderTotal + fileTotal;
     if (!total) {
         results.innerHTML = `
             <div class="text-center py-16 text-gray-500">
@@ -318,29 +336,69 @@ function globalSearch() {
         return;
     }
 
-    results.innerHTML =
-        `<p class="text-sm text-gray-500 mb-4">전체 검색 결과 <b class="text-gray-700">${total}</b>건</p>` +
-        groups.map(({ prefix, hits }) => {
-            const meta = CATEGORY_META[prefix] || { label: prefix, icon: 'fas fa-folder', color: 'gray' };
-            return `
-            <div class="mb-6">
+    // 폴더/파일 필터 바
+    const filterBtn = (key, label, count) => {
+        const active = searchFilter === key;
+        return `<button type="button" onclick="setSearchFilter('${key}')"
+            class="px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${active
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white text-gray-600 border border-gray-300 hover:bg-gray-50'}">${label} <span class="${active ? 'text-indigo-100' : 'text-gray-400'}">${count}</span></button>`;
+    };
+    const filterBar = `<div class="flex flex-wrap items-center gap-2 mb-4">
+            ${filterBtn('all', '전체', total)}${filterBtn('folder', '폴더', folderTotal)}${filterBtn('file', '파일', fileTotal)}
+        </div>`;
+
+    const showFolders = searchFilter !== 'file';
+    const showFiles = searchFilter !== 'folder';
+    const FILE_CAP = 300;            // 파일 결과 과다 방지
+    let filesRendered = 0;
+
+    const groupsHtml = groups.map(({ prefix, folderHits, fileHits }) => {
+        const meta = CATEGORY_META[prefix] || { label: prefix, icon: 'fas fa-folder', color: 'gray' };
+        const rows = [];
+        if (showFolders) {
+            for (const h of folderHits) {
+                rows.push(`<a href="${safeUrl(h.url)}" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center px-4 py-2.5 hover:bg-${h.color}-50 transition-colors duration-150 group">
+                    <i class="fas fa-folder text-${h.color}-400 group-hover:text-${h.color}-500 mr-3 text-sm flex-shrink-0"></i>
+                    <span class="text-sm text-gray-800 font-medium flex-grow">${escapeHtml(h.title)}</span>
+                    <span class="text-xs text-gray-400 mr-2 hidden sm:inline">폴더 · ${escapeHtml(h.sectionTitle)}</span>
+                    <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${h.color}-400 text-xs flex-shrink-0"></i>
+                </a>`);
+            }
+        }
+        if (showFiles) {
+            for (const h of fileHits) {
+                if (filesRendered >= FILE_CAP) break;
+                filesRendered++;
+                rows.push(`<a href="${safeUrl(h.url)}" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center px-4 py-2.5 hover:bg-${h.color}-50 transition-colors duration-150 group">
+                    <i class="fas fa-file-alt text-gray-400 group-hover:text-${h.color}-500 mr-3 text-sm flex-shrink-0"></i>
+                    <span class="text-sm text-gray-700 flex-grow">${escapeHtml(h.name)}</span>
+                    <span class="text-xs text-gray-400 mr-2 hidden sm:inline">${escapeHtml(h.folderTitle)}</span>
+                    <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${h.color}-400 text-xs flex-shrink-0"></i>
+                </a>`);
+            }
+        }
+        if (!rows.length) return '';
+        const cnt = (showFolders ? folderHits.length : 0) + (showFiles ? fileHits.length : 0);
+        return `<div class="mb-6">
                 <div class="flex items-center mb-2">
                     <span class="inline-flex items-center justify-center w-7 h-7 rounded-md bg-${meta.color}-100 mr-2">
                         <i class="${meta.icon} text-${meta.color}-600 text-sm"></i>
                     </span>
                     <span class="font-semibold text-gray-800">${escapeHtml(meta.label)}</span>
-                    <span class="text-xs text-gray-400 ml-2">${hits.length}건</span>
+                    <span class="text-xs text-gray-400 ml-2">${cnt}건</span>
                 </div>
-                <div class="bg-white rounded-lg border border-gray-200 divide-y divide-gray-100 overflow-hidden">
-                    ${hits.map(({ sectionTitle, item, color }) => `
-                        <a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center px-4 py-2.5 hover:bg-${color}-50 transition-colors duration-150 group">
-                            <i class="fas fa-file-alt text-gray-400 group-hover:text-${color}-500 mr-3 text-sm flex-shrink-0"></i>
-                            <span class="text-sm text-gray-700 flex-grow">${escapeHtml(item.title)}</span>
-                            <span class="text-xs text-gray-400 mr-2 hidden sm:inline">${escapeHtml(sectionTitle)}</span>
-                            <i class="fas fa-external-link-alt text-gray-300 group-hover:text-${color}-400 text-xs flex-shrink-0"></i>
-                        </a>`).join('')}
-                </div>
+                <div class="bg-white rounded-lg border border-gray-200 divide-y divide-gray-100 overflow-hidden">${rows.join('')}</div>
             </div>`;
-        }).join('');
+    }).join('');
+
+    const capNote = (showFiles && fileTotal > FILE_CAP)
+        ? `<p class="text-xs text-amber-600 mb-4">파일 결과가 많아 ${FILE_CAP}개까지만 표시합니다. 검색어를 더 구체적으로 입력해 보세요.</p>`
+        : '';
+
+    results.innerHTML =
+        `<p class="text-sm text-gray-500 mb-3">전체 검색 결과 <b class="text-gray-700">${total}</b>건 <span class="text-gray-400">(폴더 ${folderTotal} · 파일 ${fileTotal})</span></p>` +
+        filterBar + capNote + groupsHtml;
 }
