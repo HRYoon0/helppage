@@ -260,6 +260,15 @@ function matchesQuery(text, query) {
     return text.toLowerCase().includes(q.toLowerCase());
 }
 
+// 검색어를 한 번에 지우고 탐색 뷰로 복귀 (✕ 버튼)
+function clearGlobalSearch() {
+    const input = document.getElementById('global-search');
+    if (!input) return;
+    input.value = '';
+    globalSearch();   // 결과 숨김 + 탐색 뷰 복귀 + ✕ 버튼 숨김
+    input.focus();
+}
+
 // 전체 카테고리를 한 번에 검색 → 결과 패널 렌더, 카테고리 탐색 뷰는 숨김
 function globalSearch() {
     const input = document.getElementById('global-search');
@@ -268,6 +277,10 @@ function globalSearch() {
     if (!input || !browse || !results) return;
 
     const term = input.value.trim();
+
+    // 검색어 지우기(✕) 버튼: 입력값이 있을 때만 표시
+    const clearBtn = document.getElementById('global-search-clear');
+    if (clearBtn) clearBtn.classList.toggle('hidden', input.value.length === 0);
 
     // 검색어가 비면 탐색 뷰 복귀
     if (!term) {
