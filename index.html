@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>경상남도교육청 학교업무 도움자료</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // data.js의 color 값으로 런타임에 조합되는 동적 클래스(bg-{color}-100 등)를
-        // safelist로 보호한다. CDN 버전은 물론, 추후 빌드형 Tailwind로 옮겨도
-        // purge(미사용 클래스 제거)에 색상이 사라지지 않도록 보장한다.
-        tailwind.config = {
-            safelist: [
-                {
-                    pattern: /(bg|text)-(red|violet|teal|pink|amber|lime|fuchsia|emerald|cyan|blue|slate|green|sky|rose|purple|orange|indigo)-(100|400|500|600)/,
-                    variants: ['hover', 'group-hover'],
-                },
-            ],
-        };
-    </script>
+    <!--
+      [#2 동적 색상 메모] data.js의 color로 조합되는 bg-{color}-100, text-{color}-600 등은
+      이 Play CDN 버전에서 런타임 DOM 스캔으로 자동 생성되므로 별도 설정 없이 정상 동작한다.
+      ※ Play CDN에는 safelist를 넣지 말 것 — 광범위 패턴이 초기화를 멈춰 페이지 로딩이 멈춘다.
+        '빌드형 Tailwind'로 전환할 때만 tailwind.config.js에 아래를 넣으면 purge로 색이 사라지지 않는다:
+        safelist: [{ pattern: /^(bg|text)-(red|violet|teal|pink|amber|lime|fuchsia|emerald|cyan|blue|slate|green|sky|rose|purple|orange|indigo)-(100|400|500|600)$/, variants: ['hover','group-hover'] }]
+    -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
