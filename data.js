@@ -246,7 +246,7 @@ const elementaryData = {
             { id: "e-4-3", title: "4-03. 정보공시", url: "https://works.do/G6Ff8fP" },
             { id: "e-4-4", title: "4-04. 학교정보보안", url: "https://works.do/GFTYHYh" },
             { id: "e-4-5", title: "4-05. 개인정보보호", url: "https://works.do/x9Z5F5X" },
-            { id: "e-4-6", title: "4-06. 학교홈페이지 관리 및 운영", url: "https://works.do/5Vol2lG" },
+            { id: "e-4-6", title: "4-06. 학교누리집 관리 및 운영", url: "https://works.do/5Vol2lG" },
             { id: "e-4-7", title: "4-07. 나이스 운영", url: "https://works.do/xdifvpt" },
             { id: "e-4-8", title: "4-08. AI디지털교과서", url: "https://works.do/5dZPqu6" },
             { id: "e-4-9", title: "4-09. 학습지원 소프트웨어 선정", url: "https://works.do/FskqERF" }
