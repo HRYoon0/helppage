@@ -322,7 +322,7 @@ const secondaryData = {
         icon: "fas fa-user-tie",
         color: "amber",
         items: [
-            { id: "s-1-1", title: "1-01. 학교규칙", url: "https://works.do/5xKLYZF" },
+            { id: "s-1-1", title: "1-01. 학교규칙", url: "https://works.do/GoOMiWy" },
             { id: "s-1-2", title: "1-02. 학교생활기록부(학생부, 생기부)", url: "https://works.do/FQiRQWJ" },
             { id: "s-1-3", title: "1-03. 출결", url: "https://works.do/53yUL8v" },
             { id: "s-1-4", title: "1-04. 교외체험학습, 위탁교육", url: "https://works.do/FR1cPh0" },
