@@ -323,7 +323,7 @@ const secondaryData = {
         color: "amber",
         items: [
             { id: "s-1-1", title: "1-01. 학교규칙", url: "https://works.do/GoOMiWy" },
-            { id: "s-1-2", title: "1-02. 학교생활기록부(학생부, 생기부)", url: "https://works.do/FQiRQWJ" },
+            { id: "s-1-2", title: "1-02. 학교생활기록부(학생부, 생기부)", url: "https://works.do/5m3HhP6" },
             { id: "s-1-3", title: "1-03. 출결", url: "https://works.do/53yUL8v" },
             { id: "s-1-4", title: "1-04. 교외체험학습, 위탁교육", url: "https://works.do/FR1cPh0" },
             { id: "s-1-5", title: "1-05. 전입학, 재취학, 편입학 학적 (귀국포함)", url: "https://works.do/xvjtWhT" },
