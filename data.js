@@ -324,15 +324,15 @@ const secondaryData = {
         items: [
             { id: "s-1-1", title: "1-01. 학교규칙", url: "https://works.do/GoOMiWy" },
             { id: "s-1-2", title: "1-02. 학교생활기록부(학생부, 생기부)", url: "https://works.do/5m3HhP6" },
-            { id: "s-1-3", title: "1-03. 출결", url: "https://works.do/53yUL8v" },
-            { id: "s-1-4", title: "1-04. 교외체험학습, 위탁교육", url: "https://works.do/FR1cPh0" },
-            { id: "s-1-5", title: "1-05. 전입학, 재취학, 편입학 학적 (귀국포함)", url: "https://works.do/xvjtWhT" },
-            { id: "s-1-6", title: "1-06. 입학식", url: "https://works.do/FT8qR5e" },
-            { id: "s-1-7", title: "1-07. 방학 계획", url: "https://works.do/5m3BSVD" },
-            { id: "s-1-8", title: "1-08. 졸업 및 진급 사정", url: "https://works.do/GEsIemN" },
-            { id: "s-1-9", title: "1-09. 졸업식", url: "https://works.do/xaJoLUw" },
-            { id: "s-1-10", title: "1-10. 교육활동보호", url: "https://works.do/xtT5wnT" },
-            { id: "s-1-11", title: "1-11. 미래학교 공간재구조화", url: "https://works.do/Fz1QDE5" }
+            { id: "s-1-3", title: "1-03. 출결", url: "https://works.do/5vO53rk" },
+            { id: "s-1-4", title: "1-04. 교외체험학습, 위탁교육", url: "https://works.do/FjleCpV" },
+            { id: "s-1-5", title: "1-05. 전입학, 재취학, 편입학 학적 (귀국포함)", url: "https://works.do/GuoJDtE" },
+            { id: "s-1-6", title: "1-06. 입학식", url: "https://works.do/5wh9rx7" },
+            { id: "s-1-7", title: "1-07. 방학 계획", url: "https://works.do/xT12ygq" },
+            { id: "s-1-8", title: "1-08. 졸업 및 진급 사정", url: "https://works.do/GCUzJnc" },
+            { id: "s-1-9", title: "1-09. 졸업식", url: "https://works.do/GqJmfGK" },
+            { id: "s-1-10", title: "1-10. 교육활동보호", url: "https://works.do/5YiOoDu" },
+            { id: "s-1-11", title: "1-11. 미래학교 공간재구조화", url: "https://works.do/xYkyNBI" }
         ]
     },
     "2. 교육과정·평가": {
